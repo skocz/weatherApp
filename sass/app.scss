@@ -1,0 +1,39 @@
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    font-size: $font-size-sm;
+    color: brown;
+    padding: 0;
+    line-height: 1.1;
+    transition: color $transition-duration;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    &:hover, &:focus { color: $primary; }
+}
+
+span, p {
+    color: $primary;
+    font-size: $font-size-xs;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: font-size-xl;
+    color: black;
+}
+
+h3 {
+    font-size: font-size-md;
+    color: black;
+    text-transform: uppercase;
+}
+
+
