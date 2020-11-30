@@ -1,0 +1,52 @@
+.weather__section {
+    width: 40%;
+    height: auto;
+    max-width: 1000px;
+	max-height: 700px;
+    padding: 5%;
+    border-radius: 6px;
+    background: $gradient-primary;
+    box-shadow: $box-shadow-primary;
+
+    .weather-search__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 200px;
+
+		&:nth-of-type(2) {
+			// display: none;
+			.weather-search__btn-return {
+				padding: 5px 25px;
+				border: 2px solid black;
+			}
+
+			.weather-search__city-wrapper {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+			}
+			
+		}
+
+		.weather-search__label {
+			font-size: 200%;
+		}
+
+		.weather-search__input {
+			padding: 10px 50px;
+			border: 2px solid black;
+			font-size: 150%;
+			text-align: center;
+		}
+		.weather-search__button {
+			padding: 10px 50px;
+			border: 2px solid black;
+			font-size: 100%;
+		}
+	}
+
+
+}

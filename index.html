@@ -3,9 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 	<title>Weather App - training</title>
 </head>
 <body>
-	
+	<main>
+		<section class="weather__section">
+			<div class="weather-search__wrapper">
+				<label class="weather-search__label" for="search-weather-input">Check Weather</label>
+				<input type="text" id="search-weather-input" class="weather-search__input">
+				<button id="weather-search-button" class="weather-search__button">Search</button>
+			</div>
+
+			<div class="weather-search__wrapper">
+				<button class="weather-search__btn-return">return</button>
+
+				<div class="weather-search__city-wrapper">
+					<h1 id="weather-search__city"></h1>
+					<img id=weather-search__icon">
+				</div>
+
+				<div class="weather-search__temperatures-wrapper">
+					<h2 id="weather-current-temp"></h2>
+					<p id="weather-max-temp"></p>
+					<p id="weather-min-temp"></p>
+				</div>
+			</div>
+			
+		</section>
+	</main>
+	<script type="module" src="src/main.js"></script>
 </body>
 </html>

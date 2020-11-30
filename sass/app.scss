@@ -1,37 +1,48 @@
-html {
-    overflow-x: hidden;
-}
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: pink;
+}
+
 button {
-    font-size: $font-size-sm;
+    font-size: 14px;
     color: brown;
     padding: 0;
     line-height: 1.1;
-    transition: color $transition-duration;
+    transition: color 2s;
     cursor: pointer;
     border: none;
     background: none;
 
-    &:hover, &:focus { color: $primary; }
+    &:hover, &:focus { color: red; }
 }
-
+p {
+    display: block;
+}
 span, p {
-    color: $primary;
-    font-size: $font-size-xs;
+    color: red;
+    font-size: 14px;
     line-height: 1.25;
 }
-
+h1 {
+    font-size: 300%;
+}
 h2 {
-    font-size: font-size-xl;
+    font-size: 200%;
     color: black;
 }
 
 h3 {
-    font-size: font-size-md;
+    font-size: 16px;
     color: black;
     text-transform: uppercase;
 }
