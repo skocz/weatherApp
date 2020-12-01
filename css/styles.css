@@ -100,7 +100,13 @@ table {
   background: -o-linear-gradient(315deg, white 0%, rgba(245, 245, 245, 0.9) 100%);
   background: linear-gradient(135deg, white 0%, rgba(245, 245, 245, 0.9) 100%);
   -webkit-box-shadow: 0px 0px 10px 3px rgba(36, 36, 36, 0.05);
-          box-shadow: 0px 0px 10px 3px rgba(36, 36, 36, 0.05); }
+          box-shadow: 0px 0px 10px 3px rgba(36, 36, 36, 0.05);
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity; }
   .weather__section .weather-search__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -116,19 +122,21 @@ table {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 200px; }
-    .weather__section .weather-search__wrapper:nth-of-type(2) .weather-search__btn-return {
-      padding: 5px 25px;
-      border: 2px solid black; }
-    .weather__section .weather-search__wrapper:nth-of-type(2) .weather-search__city-wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
+    .weather__section .weather-search__wrapper:nth-of-type(2) {
+      display: none; }
+      .weather__section .weather-search__wrapper:nth-of-type(2) .weather-search__btn-return {
+        padding: 5px 25px;
+        border: 2px solid black; }
+      .weather__section .weather-search__wrapper:nth-of-type(2) .weather-search__city-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
     .weather__section .weather-search__wrapper .weather-search__label {
       font-size: 200%; }
     .weather__section .weather-search__wrapper .weather-search__input {
