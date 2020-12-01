@@ -16,8 +16,8 @@ const connectHTMLElements = () => {
 	viewElems.searchButton = getDOMElem('weather-search-button');
 	viewElems.weatherSearchCityWrapper = getDOMElem('weather-search-city-wrapper');
 
-	viewElems.weatherSearchCity = getDOMElem('weather-search-city');
-	viewElems.weatherSearchIcon = getDOMElem('weather-search-icon');
+	viewElems.weatherCity = getDOMElem('weather-search-city');
+	viewElems.weatherIcon = getDOMElem('weather-search-icon');
 
 	viewElems.weatherCurrentTemp = getDOMElem('weather-current-temp');
 	viewElems.weatherMaxTemp = getDOMElem('weather-max-temp');
@@ -44,20 +44,40 @@ const onEnterSubmit = event => {
 		fadeInOut();
 		let cityQuery = viewElems.searchInput.value;
 		getWeatherByCity(cityQuery).then(data => {
-			console.log(data);
-			switchView();
-			fadeInOut();
+		displayWeatherData(data);
 		});
 	} 
 };
 
 const onClickSubmit = () => { 
+	fadeInOut();
 	let cityQuery = viewElems.searchInput.value;
 	getWeatherByCity(cityQuery).then(data => {
-		console.log(data);
-		switchView();
+		displayWeatherData(data);
 	});
 };
+
+const displayWeatherData = data => {
+	switchView();
+	fadeInOut();
+
+	const weather = data.consolidated_weather[0];
+	console.log(weather);
+	console.log(data);
+
+	viewElems.weatherCity.innerText = data.title;
+	viewElems.weatherIcon.src = `https://www.metaweather.com/static/img/weather/${weather.weather_state_abbr}.svg`;
+	viewElems.weatherIcon.alt = weather.weather_state_name;
+
+	const currTemp = weather.the_temp.toFixed(2);
+	const maxTemp =  weather.max_temp.toFixed(2);
+	const minTemp =  weather.min_temp.toFixed(2);
+
+	viewElems.weatherCurrentTemp.innerText = `Current temperature: ${currTemp}`
+	viewElems.weatherMaxTemp.innerText =  `Max temperature: ${maxTemp}`
+	viewElems.weatherMinTemp.innerText =  `Min temperature: ${minTemp}`
+
+}
 
 const fadeInOut = () => {
 	if(viewElems.weatherSectionMain.style.opacity === '1' || viewElems.weatherSectionMain.style.opacity === '') {
@@ -83,9 +103,9 @@ const returnToSearch = () => {
 		switchView();
 		fadeInOut();
 	}, 500);
-	
 
 }
+
 
 document.addEventListener('DOMContentLoaded', initialzeApp)
 
