@@ -7,6 +7,8 @@
     border-radius: 6px;
     background: $gradient-primary;
     box-shadow: $box-shadow-primary;
+    transition-duration: .5s; 
+    transition-property: opacity;
 
     .weather-search__wrapper {
 		display: flex;
@@ -16,7 +18,7 @@
 		height: 200px;
 
 		&:nth-of-type(2) {
-			// display: none;
+			display: none;
 			.weather-search__btn-return {
 				padding: 5px 25px;
 				border: 2px solid black;
@@ -26,7 +28,6 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-
 			}
 			
 		}
