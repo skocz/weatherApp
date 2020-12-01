@@ -32,7 +32,13 @@ class WeatherApp {
 			let cityQuery = this.viewElems.weatherSearchInput.value;
 			getWeatherByCity(cityQuery).then(data => {
 				this.displayWeatherData(data);
-			});
+				this.viewElems.weatherSearchInput.style.borderColor = 'black';
+				this.viewElems.weatherSearchInput.value = '';
+			}).catch(() => {
+				this.fadeInOut();
+				this.viewElems.weatherSearchInput.style.borderColor = 'red';
+				this.viewElems.weatherSearchErrorMessage.innerText = `This place doesn\'t exist`;
+			})
 		};
 	};
 
