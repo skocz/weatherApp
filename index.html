@@ -9,25 +9,26 @@
 </head>
 <body>
 	<main>
-		<section id="weather-section-main" class="weather__section">
-			<div id="weather-search-container" class="weather-search__wrapper">
+		<section id="weatherSectionMain" class="weather__section">
+			<div id="weatherSearchContainer" class="weather-search__wrapper">
 				<label class="weather-search__label" for="search-weather-input">Check Weather</label>
-				<input type="text" id="weather-search-input" class="weather-search__input">
-				<button id="weather-search-button" class="weather-search__button">Search</button>
+				<input type="text" id="weatherSearchInput" class="weather-search__input">
+				<button id="weatherSearchBtn" class="weather-search__button">Search</button>
+				<p id="weatherSearchErrorMessage"></p>
 			</div>
 
-			<div id="weather-search-forecast-wrapper" class="weather-search__wrapper">
-				<button id="weather-search-btn-return" class="weather-search__btn-return">return</button>
+			<div id="weatherSearchForecastContainer" class="weather-search__wrapper">
+				<button id="returnToWeatherSearchBtn" class="weather-search__btn-return">return</button>
 
-				<div id="weather-search-city-wrapper" class="weather-search__city-wrapper">
-					<h1 id="weather-search-city"></h1>
-					<img id="weather-search-icon">
+				<div id="weatherSearchCityWrapper" class="weather-search__city-wrapper">
+					<h1 id="weatherSearchCity"></h1>
+					<img id="weatherSearchIcon">
 				</div>
 
 				<div class="weather-search__temperatures-wrapper">
-					<h2 id="weather-current-temp"></h2>
-					<p id="weather-max-temp"></p>
-					<p id="weather-min-temp"></p>
+					<h2 id="weatherCurrentTemp"></h2>
+					<p id="weatherMaxTemp"></p>
+					<p id="weatherMinTemp"></p>
 				</div>
 			</div>
 			
