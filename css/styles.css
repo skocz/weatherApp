@@ -16,7 +16,10 @@ main {
           align-items: center;
   height: 100vh;
   width: 100vw;
-  background: pink; }
+  background: pink;
+  background-image: url("https://picsum.photos/1700/1050");
+  background-size: cover;
+  background-position: center; }
 
 button {
   font-size: 14px;
