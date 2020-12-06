@@ -18,6 +18,9 @@ class WeatherApp {
 		console.log(listOfIds);
 		this.viewElems = mapListToDOMElements(listOfIds);
 		console.log(this.viewElems)
+		let today = new Date();
+		let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		this.viewElems.today.innerText = date;
 	};
 
 	setUpListeners = () => {
